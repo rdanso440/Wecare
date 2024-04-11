@@ -1,98 +1,84 @@
 * {
     margin: 0;
     padding: 0;
-   
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'Nunito Sans', 'Roboto', sans-serif;
 }
 
-/* First, define the .background rule */
-.background {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/bg.jpg) no-repeat center center;
-    background-size: cover;
+.home-background,
+.donate-background,
+.programs-background,
+.gallery-background,
+.story-background,
+.contact-background,
+.about-background,
+.account-background {
     height: 100vh;
     min-height: 100px;
+    
 }
 
-/* Then, define the .about-section rule */
-.about-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/As2.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
+.home-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-home.jpg) no-repeat center center/cover; /*image with dark shade*/
 }
 
-.programs-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/As3.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
+.donate-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-donate2.jpg) no-repeat center center/cover; /*image with dark shade*/
 }
 
-.involvement-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/In2.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
-}
-.account-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/Account2.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
-}
-.Testimony {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/In1.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
-}
-.contact-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/Contact2.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
-}
-.donate-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/Donation1.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 100px;
+.programs-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-programs.jpg) no-repeat center center/cover; /*image with dark shade*/
 }
 
-nav {
+.gallery-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-gallery.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.story-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-story.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.contact-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-contact.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.about-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-about.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.account-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-account.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.topnav {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    /* background-color: #88888815; */
+    /* box-shadow: inset 0 0 50px rgba(0, 0, 0);  */
     position: absolute;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     z-index: 10;
-    font-size:smaller;
 }
 
-#logo {
+.topnav #logo {
     float: left;
-    width: 65px;
+    width: 70px;
     height: auto;
     padding: 10px;
-    margin-left: 60px;
 }
 
-ul {
-    float: right;
+.topnav ul {
     list-style-type: none;
-    margin-right: 60px;
 }
 
-ul li {
+.topnav ul li {
     display: inline-block;
-    position: relative; /* Added position relative for proper positioning of sub-menu */
 }
 
-ul li a {
+.topnav ul li a {
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
@@ -100,14 +86,18 @@ ul li a {
     transition: 0.5s ease;
 }
 
-ul li a:hover {
+.topnav ul li a:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-ul li.active a {
+.topnav ul li.active a {
     background-color: #ea4f4b;
     color: #ffffff;
+}
+
+.topnav .menu-icon {
+    display: none;
 }
 
 .call2action {
@@ -126,9 +116,11 @@ ul li.active a {
     font-size: 50px;
     text-align: center;
     font-style: italic;
+    transition: 0.5s ease;
 }
+
 .call2action button {
-    background-color: #ff3030;
+    background-color: #e7433d;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -139,7 +131,7 @@ ul li.active a {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .call2action button:hover {
@@ -147,132 +139,608 @@ ul li.active a {
     color: white;
 }
 
-.intro {
+.intro-section {
     color: rgb(0, 0, 0); /* Set the text color to black */
-    font-size: 20px; /* Set the font size to 45 pixels */
+    /* font-size: 16px; */
     text-align: center; /* Align the text to the center */
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.765);
     padding: 60px; /* Add padding of 10 pixels */
     margin: 0 auto; 
 }
 
-
-.About-lead{
-    font-size: 1.25rem;
-    font-weight: 300;
-    font-size: medium;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.image-container {
+.evidence-section {
     text-align: center; /* Center the image horizontally */
-    background-color: #f71f1f; /* Background color for the square box */
+    background-color: #ffc4c4; /* Background color for the square box */
     padding: 60px;
-    font-size: 16px;
 }
 
-.image {
+.evidence-section .image-container {
     margin: 30px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
-.image img {
+.evidence-section .image-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.evidence-section .image-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 20px;
+}
+
+/* Handle */
+.evidence-section .image-container::-webkit-scrollbar-thumb {
+    background: #ea4f4b; 
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+.evidence-section .image-container::-webkit-scrollbar-thumb:hover {
+    background: #8e0000;
+}
+
+.evidence-section .image-container img {
     display: inline-block;
-    margin: 0 auto;
     margin: 0px 20px;
 }
-h3 {
-    font-size: 30px;
-    position:relative;
-    text-align: center;
-    font-style:bold;
-
-}
-
-
 
 .donations {
-    padding: 60px;
-    display: flex;
-    justify-content: space-evenly;
+    padding: 60px 30px;
+    width: 100%;
 }
 
-.card {
+.donations .cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.donations h2 {
+    text-align: center;
+}
+
+.donations .card {
     padding: 50px;
-    box-shadow: 0 4px 8px 0 rgba(235, 72, 72, 0.461);
-    width: 20vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 15vw;
+    min-width: 220px;
     max-width: 300px;
     margin: 30px;
     text-align: center;
+    background-color: #ffe6e6;
+    transition: 0.5s ease;
 }
 
-.card img {
+.donations .card img {
     width: 100%;
-    border-radius: 100%;
-    padding-bottom: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.card b {
-    color: #33d76f;
+.donations .card b {
+    color: #0ea800;
 }
 
-.footer {
-    position: static;
-    left: 0;
-    bottom: 0;
+footer {
     width: 100%;
-    background-color: rgb(51, 57, 238)(255, 249, 249);
-    color: white;
-    text-align: center;
-    padding: 20px; 
-   
+    padding: 30px 50px;
+    color: #ffffff;
+    background-color: #eeeeee;
 }
 
-.row {
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 0 auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo img {
+    float: left;
+    width: 120px;
+    height: auto;
+    padding: 10px;
+}
+
+.learn-more ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
-.column {
-    flex: 50%;
+.learn-more ul li {
+    margin: 0 12px;
 }
 
-/* Style all font awesome icons */
-.fa {
-    padding: 10px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
+.learn-more ul li a {
     text-decoration: none;
-    border-radius: 50px;
+    color: #000000;
 }
-  
-  /* Add a hover effect if you want */
-.fa:hover {
+
+.contact-us .fa-brands {
+    padding: 10px;
+    font-size: 20px;
+    width: 2em;
+    text-decoration: none;
+    text-align: center;
+    margin: 2px;
+    border-radius: 50%;
+}
+
+.contact-us .fa:hover {
     opacity: 0.7;
 }
-  
-/* Set a specific color for each brand */
 
-/* Facebook */
-.fa-facebook {
+.contact-us .fa-facebook-f {
     background: #3B5998;
-    color: white;
+    color: #ffffff;
 }
 
-/* Twitter */
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
+.contact-us .fa-x-twitter {
+    background: #000000;
+    color: #ffffff;
 }
-/* Instagram */
-.fa-instagram {
+
+.contact-us .fa-instagram {
     background: #dd2a7b;
-    color: white;
+    color: #ffffff;
 }
-.about-page {
-    padding: 100px;
+
+@media all and (max-width: 1000px) {
+    .topnav {
+        flex-direction: column;
+    }
+
+    .topnav .nav-logo {
+        width: 100%;
+    }
+
+    .topnav #logo {
+        margin-left: 30px;
+    }
+
+    .topnav .menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-size: 40px;
+        padding: 10px;
+        margin-right: 30px;
+        color: #ffffff;
+    }
+    
+    .topnav ul {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    .topnav ul li {
+        display: block;
+        border-top: 1px solid white;
+        background-color: #ec7975;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .topnav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 20px 50px;
+        border: 1px solid transparent;
+        transition: 0.3s ease;
+    }
+
+    .topnav ul li a:hover {
+        background-color: unset;
+        color: unset;
+    }
+    
+    .topnav ul li.active {
+        background-color: #ea4f4b;
+        pointer-events: none;
+    }
+
+    .topnav ul li.active a {
+        background-color: unset;
+    }
+    
+    .topnav ul li.active:hover a {
+        color: #ffffff;
+    }
+
+    .topnav ul li:hover {
+        background-color: #ffffff;
+    }
+
+    .topnav ul li:hover a {
+        color: #000000;
+    }
+    
+    .topnav .nav-active {
+        display: block;
+    }
+
+    /* .program {
+        flex-direction: column;
+    } */
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .learn-more {
+        margin: 40px 0;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .call2action h1 {
+        font-size: 40px;
+    }
+    
+    .call2action button {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .learn-more ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learn-more ul li{
+        margin: 5px 0;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .donations .cards {
+        padding: 0 150px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .donations .cards {
+        padding: 0 100px;
+    }
+}
+
+@media all and (max-width: 860px) {
+    .donations .cards {
+        padding: 0 0;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .donations .card {
+        padding: 20px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        min-width: 160px;
+        margin: 20px;
+    }
+    
+    .donations .card img {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
+
+.program {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.program .img,
+.program .text {
+    width: 50%;
+    padding: 40px;
+}
+
+.program img {
+    width: 100%;
+}
+
+.program-mid {
+    background-color: #ffc4c4;
+    flex-direction: row-reverse;
+}
+
+.donation-form-section {
+    display: flex;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.8)), url(img/bg-home.jpg) no-repeat center center/cover; */
+}
+
+.donation-form-section .image {
+    width: 50%;
+    margin: 50px 0px 50px 50px;
+    background: url(img/donate.jpg) no-repeat center center/cover;
+    border: none;
+    border-radius: 15px;
+}
+
+.donation-form-section .form-container {
+    width: 50%;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.donation-form {
+    width: 450px;
+    padding: 20px;
+    border-radius: 15px;
+    /* background-color: #ffc4c4; */
+}
+
+.amount-container {
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.amount {
+    border: 2px solid #0ea800;
+    border-radius: 7px;
+    padding: 5px;
     text-align: center;
-    background-color: #474e5d;
-    color: white;
+    cursor: pointer;
+}
+
+.amount:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.confirm {
+    margin-top: 15px;
+}
+
+.donation-form .donor p{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.donor {
+    margin-bottom: 15px;
+}
+
+.donor[type="text"] {
+    margin-top: 2%;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.donation-form p:nth-child(7) {
+    margin-top: 10px;
+    color: #66ff00;
+}
+
+.donation-form button {
+    width: 100%;
+    padding: 8px 0;
+    margin: 5px 0;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #ea4f4b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donation-form button:hover {
+    color: #ffffff;
+    background-color: #8e0000;
+}
+
+.donation-form p:nth-child(9) {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.donation-form .link {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+
+/* 
+
+.frequency {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4%;
+    background-color: #ffc4c4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.frequency span:first-child {
+    padding: 4%;
+    background-color: #ea4f4b;
+    border-radius: 10px;
+}
+
+.frequency span: {
+    padding: 4%;
+    background-color: #ea4f4b;
+    border-radius: 10px;
+}
+
+
+.frequency span {
+    padding-left: 25%;
+    cursor: pointer;
+} */
+div.gallery {
+    border: 2px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 30px 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 50%;
+      margin: 5px 0;
+      padding: 0px 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  /* GALLERY */
+  .gallery-section {
+    text-align: center; /* Center the image horizontally */
+    background-color: #ffffff; /* Background color for the square box */
+    padding: 20px;
+    
+}
+
+.gallery-section .image-container {
+    margin: 10px;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-section .image-container img {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+
+/* Contact form */
+h5{
+    color: #060505 !important;
+    margin-bottom: -8px !important;
+    font-size: 80px !important;
+}
+body {font-family: 
+    Arial, Helvetica, sans-serif;
+}
+* {box-sizing:
+     border-box;
+    }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+  margin-top: 4px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: rgb(252, 250, 250);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #eae6e6;
+  padding: 20px;
+}
+
+/* Hero Image */
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/hero.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 10px;
+  padding: auto;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+ }

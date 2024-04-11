@@ -1,53 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Wecare.com</title>
-    <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
+    <title>We Care</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Basic&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <img src="img/logo.png" alt="Logo" id="logo">
-        <ul>
+    <nav class="topnav" id="topNav">
+        <div class="nav-logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" id="logo"></a>
+        </div>
+        <ul class="menu-items" id="menu-items">
             <li><a href="index.html">Home</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="involvement.html">Involvement</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="story.html">Story</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active"><a href="contact.html">Contact</a></li>
             <li><a href="donate.html">Donate</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
         </ul>
+        <div class="menu-icon" onclick="responsiveNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </nav>
 
-    <!-- <div class="background"></div> -->
-    <div class="contact-section"></div>
+    <div class="contact-background"></div>
 
     <div class="call2action">
-        <h1>FOR MORE INFOMATION</h1>
+        <h1>JOIN HANDS, TRANSFORM LIVES</h1>
+        
     </div>
     
-    <div class="intro">
-       <p>People are often discussing the prevalence of crime in our society, yet few take the initiative to thoroughly analyze the underlying causes and work towards solutions. Many fail to recognize that our world is inhabited by individuals facing hunger, thirst, homelessness, poverty, lack of education, depression, or loneliness. We advocate for extending a hand to those in need, offering them hope for a brighter future. Our efforts involve establishing new communities, allocating funds, initiating educational institutions, creating job opportunities, and fostering the sharing of knowledge and positive sentiments, including humor. We seek individuals with genuine intentions to transform someone's difficult day into a fantastic reality, reminiscent of the spirit of the 'wecare' initiative."</p>
-    </div>
+    <h5>GET IN TOUCH</h5>
+    <p>Please feel free to contact us if you have any further questions.</p>
+    <h2>Contact Form</h2>
 
-    <div class="image-container">
-        <h2>EVIDENCE OF CHILDREN'S WE HELP</h2> 
-        <div class="image">
-            <img src="img/img1.jpg" alt="image1.jpg" width="250" height="180">
-            <img src="img/img2.jpg" alt="image2.jpg" width="250" height="180">
-            <img src="img/img3.jpg" alt="image3.jpg" width="250" height="180">
-            <img src="img/img4.jpg" alt="image4.jpg" width="250" height="180"> 
+    <div class="container">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="usa">Other</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>YOUR MONEY CAN SAVE A CHILD</h1>
+          <div class="call2action">
+          <a href="donate.html">
+            <button>Donate Now</button>
+          </div>
+        </a>
         </div>
-        <p>
-            Wecare, a dedicated and impactful charity, prioritizes the empowerment of visually impaired youth, aiming for their holistic well-being and success. Through meticulously organized mentoring programs, support gatherings, and engaging events, Wecare extends a hand to ensure that no individual feels isolated in their journey. Their core belief revolves around the idea that nobody should navigate the challenges of visual impairment alone. By providing a nurturing environment, Wecare facilitates connections among young people, parents, and caregivers, fostering a sense of community where experiences are shared and encouragement flows freely.
-            <br><br>
-            Whether it's the personalized guidance of mentorship, the transformative experiences of special events, or the convenience of online forums, Wecare is steadfast in its commitment to ensuring that visually impaired children not only receive the essential care but also the invaluable guidance and empathy necessary to thrive in life. With Wecare, these young individuals are equipped with the tools, support, and understanding to navigate life's complexities with confidence and resilience.
-        </p>
-    </div>
+      </div>
 
+   
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                <a href="index.html"><h2>We Care</h2></a>
+            </div>
+            <div class="learn-more">
+                <ul>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="involvement.html">Involvement</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="story.html">Story</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+            <div class="contact-us">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
