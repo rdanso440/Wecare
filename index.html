@@ -13,6 +13,8 @@
     <nav class="topnav" id="topNav">
         <div class="nav-logo">
             <a href="index.html"><img src="img/logo.png" alt="Logo" id="logo"></a>
+            <h4><a href="index.html">We Care</a></h4>
+
         </div>
         <ul class="menu-items" id="menu-items">
             <li class="active"><a href="index.html">Home</a></li>
@@ -22,7 +24,13 @@
             <li><a href="story.html">Story</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="account.html">Account</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Account</div>
+                <div class="dropdown-content">
+                    <a href="signup.html">Signup</a>
+                    <a href="login.html">Login</a>
+                  </div>
+            </li>
         </ul>
         <div class="menu-icon" onclick="responsiveNav()">
             <i class="fa-solid fa-bars"></i>
